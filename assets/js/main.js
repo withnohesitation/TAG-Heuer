@@ -133,6 +133,21 @@ b.to('.sc-hero-add',{
 
 //feature
 
+gsap.fromTo('.sc-feature .feature-ani',{
+    clipPath: "inset(0px 120px 0px 120px)"
+        
+},{
+    scrollTrigger:{
+        trigger:'.sc-feature .ani-bg', //기준
+        start:"0% 100%",
+        end:"0% 0%", 
+        //markers: true,
+        scrub:0,
+        duration:5
+    },
+    clipPath: "inset(0px 0px 0px 0px)"
+})
+
 let imgList4=``;
 
 for (let idx = 0; idx < 174; idx++) {

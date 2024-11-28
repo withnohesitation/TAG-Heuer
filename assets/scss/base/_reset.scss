@@ -25,3 +25,6 @@ body {
     line-height: 1.5;
     color: #000;
 }
+input[placeholder] {
+    text-overflow: ellipsis;
+}

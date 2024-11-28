@@ -154,11 +154,16 @@
     .bar-util {
         display: flex;
         align-items: center;
+        height: 100%;
         @include tablet {
             flex: 0 0 auto;
         }
         .util-item {
+            position: relative;
+            display: flex;
+            align-items: center;
             font-family: $font-con;
+            height: 100%;
             font-size: 2.4rem;
             margin-left: 3.5rem;
             font-weight: 400;
@@ -177,6 +182,164 @@
         }
         .util-cart::before{
             content: "\f10a";
+        }
+        .popbottom{
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 8.6rem;
+            right: 0;
+            left: auto;
+            width: auto;
+            background: #fff;
+            box-shadow: 0 .3rem .4rem rgba(43,36,25,.2);
+            color: #000;
+            overflow: hidden;
+            font-family: $font-Apax;
+            &.on {
+                opacity: 1;
+                visibility: visible;
+            }
+            form {
+                padding: 2rem;
+                width: 30rem;
+            }
+            fieldset {
+                border: none;
+                legend {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    font-family: $font-Apax;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    letter-spacing: .2rem;
+                    margin-bottom: 1rem;
+                }
+            }
+            .required {
+                font-size: 1.2rem;
+                color: #707070;
+            }
+            .form-col {
+                margin: 0 0 2.5rem;
+                .field-label {
+                    font-size: 1.2rem;
+                    margin: 0;
+                    display: flex;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                input::placeholder {
+                    font-size: 1.2rem;
+                }
+                .field-input {
+                    border: solid #000;
+                    border-radius: 0;
+                    border-width: 0 0 .1rem;
+                    box-shadow: none;
+                    display: block;
+                    font-size: 1.6rem;
+                    height: 4rem;
+                    line-height: 1;
+                    padding: 0;
+                    //transform: scale(.75);
+                    //transform-origin: left top;
+                    //transition: border .4s;
+                    width: 100%;
+                }
+            }
+            .login-terms {
+                color: #707070;
+                margin-bottom: 2rem;
+                font-size: 1rem;
+                .policy {
+                    text-decoration: underline;
+                }
+                .icon-link {
+                    font-size: 1rem;
+                    
+                }
+                .icon-link::before {
+                    font-family: "fonticon";
+                    font-weight: 400;
+                    vertical-align: middle;
+                    text-decoration: none;
+                    content: "\f12f";
+                    display: inline-block;
+                }
+            }
+            .btn-link {
+                width: 100%;
+                cursor: pointer;
+                background: #000;
+                letter-spacing: .16rem;
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 1.2rem;
+                line-height: 1;
+                padding: 2rem 3rem;
+            }
+            .text-find {
+                text-align: center;
+            }
+            .btn-findpw {
+                color: #000;
+                margin-top: 2rem;
+                text-decoration: underline;
+                cursor: pointer;
+                font-size: 1.2rem;
+                line-height: 1.2;
+            }
+            .text-add {
+                text-align: center;
+                background: #fafafa;
+                padding: 2rem 0;
+                .link-join {
+                    text-decoration: underline;
+                    white-space: nowrap;
+                    border-radius: 0;
+                    font-size: 1.2rem;
+                    line-height: 1.2;
+                    color: #000;
+                    font-weight: 400;
+                }
+            }
+        }
+        .popbottom.cart {
+            font-size: 1.2rem;
+            max-width: 32rem;
+            min-height: 20rem;
+            min-width: 32rem;
+            .cart-footer {
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                .total {
+                    display: flex;
+                    justify-content: space-between;
+                    border-top: .1rem solid #d9d9d9;
+                    padding: 2rem;
+                }
+                .reinsurance {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    border-top: .1rem solid #d9d9d9;
+                    padding: 2rem 0;
+                    text-align: center;
+                }
+                .icon-delivery {
+                    width: 20px;
+                   svg {
+                    width: 100%;height: 100%;
+                   }
+                }
+                .btn-link {
+                    text-align: center;
+                }
+            }
         }
     }
 
@@ -203,6 +366,7 @@
         width: 50%;
         padding: 4rem 3rem;
         transform: translateY(20%);
+        transition: .5s;
     }
     .sub-box {
         padding-left: 4rem;

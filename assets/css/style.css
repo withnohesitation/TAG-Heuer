@@ -96,6 +96,10 @@ body {
   color: #000;
 }
 
+input[placeholder] {
+  text-overflow: ellipsis;
+}
+
 .blind {
   position: absolute;
   width: 1px;
@@ -518,6 +522,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
 }
 @media (max-width: 1023px) {
   .gnb .bar-util {
@@ -527,7 +532,15 @@ body {
   }
 }
 .gnb .bar-util .util-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "fonticon", sans-serif;
+  height: 100%;
   font-size: 2.4rem;
   margin-left: 3.5rem;
   font-weight: 400;
@@ -548,6 +561,192 @@ body {
 }
 .gnb .bar-util .util-cart::before {
   content: "\f10a";
+}
+.gnb .bar-util .popbottom {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 8.6rem;
+  right: 0;
+  left: auto;
+  width: auto;
+  background: #fff;
+  -webkit-box-shadow: 0 0.3rem 0.4rem rgba(43, 36, 25, 0.2);
+          box-shadow: 0 0.3rem 0.4rem rgba(43, 36, 25, 0.2);
+  color: #000;
+  overflow: hidden;
+  font-family: "Apax", sans-serif;
+}
+.gnb .bar-util .popbottom.on {
+  opacity: 1;
+  visibility: visible;
+}
+.gnb .bar-util .popbottom form {
+  padding: 2rem;
+  width: 30rem;
+}
+.gnb .bar-util .popbottom fieldset {
+  border: none;
+}
+.gnb .bar-util .popbottom fieldset legend {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "Apax", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+.gnb .bar-util .popbottom .required {
+  font-size: 1.2rem;
+  color: #707070;
+}
+.gnb .bar-util .popbottom .form-col {
+  margin: 0 0 2.5rem;
+}
+.gnb .bar-util .popbottom .form-col .field-label {
+  font-size: 1.2rem;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.gnb .bar-util .popbottom .form-col input::-webkit-input-placeholder {
+  font-size: 1.2rem;
+}
+.gnb .bar-util .popbottom .form-col input::-moz-placeholder {
+  font-size: 1.2rem;
+}
+.gnb .bar-util .popbottom .form-col input:-ms-input-placeholder {
+  font-size: 1.2rem;
+}
+.gnb .bar-util .popbottom .form-col input::-ms-input-placeholder {
+  font-size: 1.2rem;
+}
+.gnb .bar-util .popbottom .form-col input::placeholder {
+  font-size: 1.2rem;
+}
+.gnb .bar-util .popbottom .form-col .field-input {
+  border: solid #000;
+  border-radius: 0;
+  border-width: 0 0 0.1rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: block;
+  font-size: 1.6rem;
+  height: 4rem;
+  line-height: 1;
+  padding: 0;
+  width: 100%;
+}
+.gnb .bar-util .popbottom .login-terms {
+  color: #707070;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.gnb .bar-util .popbottom .login-terms .policy {
+  text-decoration: underline;
+}
+.gnb .bar-util .popbottom .login-terms .icon-link {
+  font-size: 1rem;
+}
+.gnb .bar-util .popbottom .login-terms .icon-link::before {
+  font-family: "fonticon";
+  font-weight: 400;
+  vertical-align: middle;
+  text-decoration: none;
+  content: "\f12f";
+  display: inline-block;
+}
+.gnb .bar-util .popbottom .btn-link {
+  width: 100%;
+  cursor: pointer;
+  background: #000;
+  letter-spacing: 0.16rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 2rem 3rem;
+}
+.gnb .bar-util .popbottom .text-find {
+  text-align: center;
+}
+.gnb .bar-util .popbottom .btn-findpw {
+  color: #000;
+  margin-top: 2rem;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+.gnb .bar-util .popbottom .text-add {
+  text-align: center;
+  background: #fafafa;
+  padding: 2rem 0;
+}
+.gnb .bar-util .popbottom .text-add .link-join {
+  text-decoration: underline;
+  white-space: nowrap;
+  border-radius: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #000;
+  font-weight: 400;
+}
+.gnb .bar-util .popbottom.cart {
+  font-size: 1.2rem;
+  max-width: 32rem;
+  min-height: 20rem;
+  min-width: 32rem;
+}
+.gnb .bar-util .popbottom.cart .cart-footer {
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.gnb .bar-util .popbottom.cart .cart-footer .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 0.1rem solid #d9d9d9;
+  padding: 2rem;
+}
+.gnb .bar-util .popbottom.cart .cart-footer .reinsurance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  border-top: 0.1rem solid #d9d9d9;
+  padding: 2rem 0;
+  text-align: center;
+}
+.gnb .bar-util .popbottom.cart .cart-footer .icon-delivery {
+  width: 20px;
+}
+.gnb .bar-util .popbottom.cart .cart-footer .icon-delivery svg {
+  width: 100%;
+  height: 100%;
+}
+.gnb .bar-util .popbottom.cart .cart-footer .btn-link {
+  text-align: center;
 }
 .gnb .sub-container {
   display: -webkit-box;
@@ -577,6 +776,8 @@ body {
   padding: 4rem 3rem;
   -webkit-transform: translateY(20%);
           transform: translateY(20%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 .gnb .sub-box {
   padding-left: 4rem;
@@ -2311,7 +2512,7 @@ body {
 .breadcrumb-box .selected::before {
   content: "\f107";
   display: block;
-  font-family: fonticon;
+  font-family: "fonticon", sans-serif;
   color: #fff;
   font-weight: 400;
   line-height: 1;

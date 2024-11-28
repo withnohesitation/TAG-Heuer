@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="./assets/css/swiper.css">
     <link rel="stylesheet" href="./assets/css/swiper.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon_tag/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon_tag/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon_tag/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/gsap.js"></script>
     <script src="assets/js/ScrollTrigger.js"></script>
@@ -42,6 +47,7 @@
                     </li>
                 </ul>
             </div>
+            
             <div class="header-banner">
                 <div class="col-left">
                     <button class="btn-lang">
@@ -245,20 +251,72 @@
                         <li class="util-item">
                             <a href="" class="util-search" role="button">
                                 <span class="blind">search</span>
-                                <!--svg-->
                             </a>
                         </li>
                         <li class="util-item">
                             <a href="" class="util-login" role="button">
                                 <span class="blind">login, sign in</span>
-                                <!--svg-->
                             </a>
+                            <div class="popbottom sign" aria-label="my account">
+                                <form action="">
+                                    <fieldset>
+                                        <legend>SIGN IN</legend>
+                                        <p class="required">* Mandatory fields</p>
+                                        <div class="form-col">
+                                            <label for="" class="field-label">
+                                                <span class="blind">241 characters max</span>
+                                                Email Address<span> *</span>
+                                            </label>
+                                            <input type="email" class="field-input" id="input-email" name="input-email" aria-required="true" value="" maxlength="241" pattern="^[\w%+-]+(\.[\w%+-]+)*@([\w-]+\.)+[\w]{2,}$" data-formid="email" data-error-value="The value is incorrect" data-error-parse="The format is incorrect" data-error-range="The length is incorrect" data-error-missing="Mandatory field" placeholder="Ex.: example@tagheuer.com" autocomplete="email" >
+                                            <div class="field-bar"></div>
+                                            <div class="field-error"></div>
+                                        </div>
+                                        <div class="form-col">
+                                            <label for="" class="field-label">
+                                                Password *
+                                            </label>
+                                            <input type="password" class="field-input" id="input-password" name="input-password" aria-required="true" value="" maxlength="50" data-formid="passwordnovalidation" data-error-value="The value is incorrect" data-error-parse="The format is incorrect" data-error-range="The length is incorrect" data-error-missing="Mandatory field" placeholder="Your password" autocomplete="current-password" >
+                                            <div class="field-bar"></div>
+                                            <div class="field-error"></div>
+                                        </div>
+                                        <div class="login-terms">
+                                            <p> By logging into my account, I confirm that I have read and accept the 
+                                                <a href="" class="policy" target="_blank">Privacy Policy
+                                                    <span class="icon-link"><!--before--></span>
+                                                </a>
+                                                of TAG Heuer.
+                                            </p>
+                                        </div>
+                                        <button type="submit" class="btn-link">LOGIN</button>
+                                        <div class="text-find"><button class="btn-findpw">forgotten password?</button></div>
+                                    </fieldset>
+                                </form>
+                                <div class="text-add">
+                                    <a href="" class="link-join" target="_blank">Create an account</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="util-item">
                             <a href="" class="util-cart" role="button">
                                 <span class="blind">cart</span>
-                                <!--svg-->
                             </a>
+                            <div class="popbottom cart">
+                                <div class="cart-footer">
+                                    <div class="total">
+                                        <p>Subtotal</p>
+                                        <p class="pirce">0 €</p>
+                                    </div>
+                                    <p class="reinsurance">
+                                        <span class="icon-delivery">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 0C21.5 0 0 21.5 0 48L0 368c0 26.5 21.5 48 48 48l16 0c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L48 0zM416 160l50.7 0L544 237.3l0 18.7-128 0 0-96zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+                                        </span>
+                                        Complimentary Shipping & easy return
+                                    </p>
+                                    <a href="" class="btn-link">
+                                        SEE MY SHOPPING CART
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>

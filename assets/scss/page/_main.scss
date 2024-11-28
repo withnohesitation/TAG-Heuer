@@ -1143,7 +1143,7 @@
         &::before {
             content: "\f107";
             display: block;
-            font-family: fonticon;
+            font-family: $font-con;
             color: #fff;
             font-weight: 400;
             line-height: 1;

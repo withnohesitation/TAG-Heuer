@@ -34,7 +34,6 @@ var directionMenu = 1;
   //animationCompleted = true;
   animationMenu.play();
 });
-
   iconMenu.addEventListener('mouseleave', (e) => {
   animationMenu.setDirection(-directionMenu);
   animationMenu.play();
@@ -51,6 +50,17 @@ $('.gnb .menu-item').hover(function(){
 
 })
 
+
+$('.gnb .bar-util .util-item').hover(function(){
+  $(this).find('.popbottom').addClass('on');
+  
+}, function(){
+  $(this).find('.popbottom').removeClass('on');
+
+})
+
+
+//아래 스크롤시 헤더 사라지고 올리면 다시 나오는 효과
         let lastScroll = 0; 
 
         $(window).scroll(function(){
